@@ -1,5 +1,6 @@
-This readme will guide you trough the steps of running metasploit on windows without admin privileges and without triggering windows defender
-as a precaution, run this from a portable drive, and not directly from your C-drive
+This readme will guide you trough the steps of running metasploit on windows without admin privileges. (i.e. portable application style)
+It also provides an example of running X(GUI) applications from within a docker container.
+As a precaution if you worry about triggering AV such as windows defender in the host, run this from a portable drive, and not directly from your C-drive.
 
 INSTALLATION
 
@@ -83,5 +84,6 @@ CMD /usr/bin/firefox
 alpine:~$ sudo docker build -t firefox .
 alpine:~$ docker run -ti --rm -e DISPLAY=HOST_IP:0.0 firefox
 
+ useful link: https://dev.to/darksmile92/run-gui-app-in-linux-docker-container-on-windows-host-4kde
 (you can also run a mitm proxy like burp-suite by deploying it in the same container. However, its quite slow)
 
